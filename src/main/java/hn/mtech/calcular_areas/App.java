@@ -18,30 +18,49 @@ public class App {
 
             switch (opcion) {
                 case 1:
-                   double area = obtenerAreaCirculo();
-                   System.out.println("El area del cirulo es: "+ area);
+                   double areaCirculo = obtenerAreaCirculo();
+                   System.out.println("El area del cirulo es: "+ areaCirculo);
                     break;
-                
-            }
+            
+            
 
-            switch (opcion) {
                 case 2:
-                   double area = obtenerLadoCuadrado();
-                   System.out.println("El area del cuadrado es: "+ area);
+                   double areaCuadrado = obtenerLadoCuadrado();
+                   System.out.println("El area del cuadrado es: "+ areaCuadrado);
                     break;
-                
-            }
-            switch (opcion) {
+            
+            
+            
             case 3:
-               double area = obtenerAreaRectangulo();
-               System.out.println("El area del cuadrado es: "+ area);
+               double areaRectangulo = obtenerAreaRectangulo();
+               System.out.println("El area del cuadrado es: "+ areaRectangulo);
                 break;
             
-        }
+            
+           
+            case 4:
+               double areaTraingulo = obtenerAreaTriangulo();
+               System.out.println("El area del triangulo es: "+ areaTraingulo);
+                break;
+            
+            
+           
+            case 0:
+               
+            	System.out.println("Saliendo de la aplicacion");
+                break;
+            default:
+             	 System.out.println("Opcion no valida");
+             
+            	 
+            }
+        
+            
         }while (opcion != 0);
     
     	
- }
+    }
+  
     	
     
     //Area de un circulo
@@ -96,11 +115,11 @@ public class App {
 	public static double areaRectangulo(double base, double altura) {
 		double resultado = 0.00;
 		if (base <=0 && altura<=0) {
-			System.err.println("La base y el lado deben ser >0");
+			System.err.println("La base y la altura no deben ser <=0");
 		}else if(base==0) {
-			System.err.println("No se puede dejar calcular con base a 0");
+			System.err.println("No se puede calcular con base a <=0");
 		}else if(altura==0) {
-			System.err.println("No se puede dejar calcular con altura a 0");
+			System.err.println("No se puede  calcular con altura a <=0");
 		}else {
 			resultado = base*altura;
 		}
@@ -119,6 +138,42 @@ public class App {
 
 	    return area;
 	}
+
+
+	
+//************Area Traingulo **********8
+
+	public static double areaTriangulo(double base, double altura) {
+		double resultado = 0.00;
+		if (base <=0 && altura<=0) {
+			System.err.println("La base y la altura no deben ser <=0");
+		}else if(base==0) {
+			System.err.println("No se puede  calcular con base a 0");
+		}else if(altura==0) {
+			System.err.println("No se puede  calcular con altura a 0");
+		}else {
+			resultado = (base*altura)/2;
+		}
+		return resultado;
+	}
+	
+	public static double obtenerAreaTriangulo() {
+	    Scanner scanner = new Scanner(System.in);
+
+	    System.out.print("Ingresa la base del triangulo ");
+	    double base = scanner.nextDouble();
+	    System.out.print("Ingresa la altura del triangulo ");
+	    double altura = scanner.nextDouble();
+	    //llamamos el metodo calculararea y le pasamos el radio
+	    double area = areaRectangulo(base,altura)/2;
+
+	    return area;
+	}
+
+
+	
+	
+	
 
 
 	

@@ -108,6 +108,52 @@ public class AppTest {
 		assertEquals(areaDeseada,areaCalculada,0.0001);
 		
 	}
+	@Test
+	public void testAreaRectangulo3()
+	{
+		double base =0.00;
+		double altura = 0.00;
+		double areaDeseada = base * altura;
+		double areaCalculada = App.areaRectangulo(base,altura);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+	@Test
+	public void testAreaTriangulo() {
+		double base = 0.00;
+		double altura = 0.00;
+		double areaDeseada = (base * altura)/2;
+		double areaCalculada = App.areaTriangulo(base,altura);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+		
+	}
+	@Test
+	public void testAreaTriangulo1() {
+		double base = 0.00;
+		double altura = 3.00;
+		double areaDeseada = (base * altura)/2;
+		double areaCalculada = App.areaTriangulo(base,altura);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+		
+	}
+	
+	@Test
+	public void testAreaTriangulo2() {
+		double base = 0.00;
+		double altura = 3.00;
+		double areaDeseada = (base * altura)/2;
+		double areaCalculada = App.areaTriangulo(base,altura);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+		
+	}
 	
 
    
