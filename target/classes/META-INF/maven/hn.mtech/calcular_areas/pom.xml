@@ -13,7 +13,7 @@
   <name>calcular reas</name>
   <description>App que permite calulcar diversas areas trigonometricas.</description>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/Mtorres86/calcular_areas.git</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

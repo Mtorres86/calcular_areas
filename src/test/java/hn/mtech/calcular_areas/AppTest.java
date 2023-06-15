@@ -1,38 +1,116 @@
 package hn.mtech.calcular_areas;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.assertEquals;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+import org.junit.Assert;
+import org.junit.Test;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+public class AppTest {
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	//Area del circulo
+	@Test
+	public void testAreaCirculo()
+	{
+		double radio =5.0;
+		double areaDeseada = Math.PI * radio * radio;
+		double areaCalculada = App.calcularArea(radio);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+	@Test
+	public void testAreaCirculo1()
+	{
+		double radio =10.0;
+		double areaDeseada = Math.PI * radio * radio;
+		double areaCalculada = App.calcularArea(radio);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+	@Test
+	public void testAreaCirculo2()
+	{
+		double radio =0.0;
+		double areaDeseada = Math.PI * radio * radio;
+		double areaCalculada = App.calcularArea(radio);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+	//area de un cuadrado
+	@Test
+	public void testAreaCuadrado()
+	{
+		double lado =13.0;
+		double areaDeseada = Math.PI * lado * lado;
+		double areaCalculada = App.areaCuadrado(lado);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	@Test
+	public void testAreaCuadrado1()
+	{
+		double lado =14.0;
+		double areaDeseada = Math.PI * lado * lado;
+		double areaCalculada = App.areaCuadrado(lado);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+	@Test
+	public void testAreaCuadrado2()
+	{
+		double lado =0.00;
+		double areaDeseada = Math.PI * lado * lado;
+		double areaCalculada = App.areaCuadrado(lado);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+	@Test
+	public void testAreaRectangulo()
+	{
+		double base =10.00;
+		double altura = 0.00;
+		double areaDeseada = base * altura;
+		double areaCalculada = App.areaRectangulo(base,altura);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	@Test
+	public void testAreaRectangulo1()
+	{
+		double base =0.00;
+		double altura = 10.00;
+		double areaDeseada = base * altura;
+		double areaCalculada = App.areaRectangulo(base,altura);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+	@Test
+	public void testAreaRectangulo2()
+	{
+		double base =10.00;
+		double altura = 10.00;
+		double areaDeseada = base * altura;
+		double areaCalculada = App.areaRectangulo(base,altura);
+		
+		assertEquals(areaDeseada,areaCalculada,0.0001);
+		
+	}
+	
+
+   
 }
+
+ 
